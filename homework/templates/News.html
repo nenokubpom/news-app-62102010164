@@ -4,7 +4,7 @@
 <h1>New search</h1>
 
 <form>
-    <input type="text" name="news" placeholder="news search">
+    <div class="col-xs-3"><input class="form-control " type="text" name="news" placeholder="news search" ></div>
     <input type="submit" value="Submit">
 </form>
 
@@ -14,7 +14,7 @@
 {% for x in news %}
 <p><b>Title: {{x['title']}}</b></p>
 <p>Description:</p>  <p>{{x.description}}</p>
-<p><a href="{{x.link}}" width="500" height="600">read more</a></p>
+<button><a href="{{x.link}}" width="500" height="600">read more</a></button>
 {% endfor %}
 
 {% endblock %}

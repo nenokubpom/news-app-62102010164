@@ -4,10 +4,10 @@
 <h1>Current Weather</h1>
 
 <form>
-    <input type="text" name="city" placeholder="weather search">
+    <div class="col-xs-3"><input class="form-control " type="text" name="city" placeholder="weather search" ></div>
     <input type="submit" value="Submit">
 </form>
-
+<p></p>
 <p>City: <b>{{weather.city}}, {{weather.country}}</b></p>
 <p>Description: {{weather.description}} </p>
 <p>Temperature: {{weather.temperature}}&#8451</p>
@@ -20,7 +20,7 @@
 {% for x in covidnews %}
 <p><b>Title: {{x.title}}</b></p>
 <p>Description:</p>  <p>{{x.description}}</p>
-<p><a href="{{x.link}}" width="500" height="600">read more</a></p>
+<button><a href="{{x.link}}" width="500" height="600">read more</a></button>
 <img id="img2" src="{{x.img}}">
 
 {% endfor %}
