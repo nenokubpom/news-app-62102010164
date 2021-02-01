@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<h1>New search</h1>
+
+<form>
+    <input type="text" name="news" placeholder="news search">
+    <input type="submit" value="Submit">
+</form>
+
+
+<h1>News</h1>
+
+{% for x in news %}
+<p><b>Title: {{x['title']}}</b></p>
+<p>Description:</p>  <p>{{x.description}}</p>
+<p><a href="{{x.link}}" width="500" height="600">read more</a></p>
+{% endfor %}
+
+{% endblock %}
